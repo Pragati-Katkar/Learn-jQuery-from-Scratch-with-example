@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- <script src="https://code.jquery.com/jquery-3.6.4.js" > </script> -->
+		<title>jquery on/off Method</title>
+		<script src="js/jquery-min.js"></script>
+		<style>
+			#body{
+				font-family:arial
+			}
+			#box{
+				
+				padding:10px;
+				border:1px solid #000;
+			}
+			.boxg{
+				background:pink;
+			} 
+		</style>
+		
+	</head>
+	<body>
+		<h1>on off method</h1>
+		<div id="box" class="test">
+			<h2>Test box</h2>
+			<p>dsf ffregf wegfrfref erfrefre ergrt ergerfgefg </p>
+		</div>
+		<button>Remove event</button>
+	<script>
+		$(document).ready(function(){
+		/*	$("#box").on("click" , function(){
+				$(this).css("background" , "orange");
+			});
+			$("#box").on("mouseover mouseout", function(){
+				$(this).toggleClass("boxg");
+			});  */
+			
+			$("#box").on({
+				"click" : function(){
+					$(this).css("background" , "orange");
+				
+				},
+				"mouseover" : function(){
+					$(this).addClass("boxg");
+				},
+				"mouseout" : function(){
+					$(this).css("border" , "2px solid red");
+				}
+			
+			
+			});
+			
+			$(".button").click(function(){
+				$("#box").off("mouseover mouseout")
+				
+			});
+				
+		});  
+	
+	</script>
+	</body>
+</html>

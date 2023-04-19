@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- <script src="https://code.jquery.com/jquery-3.6.4.js" > </script> -->
+		<title>jquery slideup slidedown slidetoggle method</title>
+		<script src="js/jquery-min.js"></script>
+		<style>
+			#body{
+				font-family:arial
+			}
+			#box{
+				
+				padding:10px;
+				border:1px solid #000;
+				background:pink;
+			} 
+			.box1{
+				
+				padding:10px;
+				border:1px solid #000;
+				background:green;
+			} 
+		</style>
+		
+	</head>
+	<body>
+		<h1>slideup slidedown slidetoggle method</h1>
+		<br>
+		<div id="box" class="test">
+			<h2>Test box</h2>
+			<p>dsf ffregf wegfrfref erfrefre ergrt ergerfgefg </p>
+			
+		</div>
+		<br>
+		<button id="slideupbtn">slideUp</button>
+		<button id="slidedownbtn">slideDown</button>
+		<button id="slidetogglebtn">slideToggle</button>
+		<script>
+			$(document).ready(function(){
+				$("#slideupbtn").click(function(){
+					$("#box").slideUp(2000);
+						
+					
+				});
+				$("#slidedownbtn").click(function(){
+					$("#box").slideDown(2000,function(){
+						
+					});
+				});
+					
+				$("#slidetogglebtn").click(function(){
+					$("#box").slideToggle(2000 , function(){
+						$('#box').append("<span>append text</span>");
+					});
+					
+				});
+			});
+		
+		</script>
+	</body>
+</html>

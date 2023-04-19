@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- <script src="https://code.jquery.com/jquery-3.6.4.js" > </script> -->
+		<title>jquery clone Method</title>
+		<script src="js/jquery-min.js"></script>
+		<style>
+			#body{
+				font-family:arial
+			}
+			#box{
+				padding:10px;
+				border:1px solid #000;
+				background:pink;
+			} 
+			#box2{
+				padding:10px;
+				border:1px solid #000;
+				background:yellow;
+			} 
+			
+		</style>
+		
+	</head>
+	<body>
+		<h1> clone Method</h1>
+		<br>
+		<div id="box" class="test">
+			<h2>Test box</h2>
+			<p>dsf ffregf wegfrfref erfrefre ergrt ergerfgefg </p>
+		</div>
+		<br><br>
+		<div id="box2">
+			<p>Secound div for clone</p>
+		</div>
+		<br>
+		<button id="clonebtn">clone</button>
+		
+		<script>
+			$(document).ready(function(){
+				$("#clonebtn").click(function(){
+					$("#box h2").clone().prependTo("#box2");
+					$("#box h2").clone().appendTo("#box2");
+				});
+			});
+		</script>
+	</body>
+</html>

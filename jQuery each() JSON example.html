@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>jQuery each() JSON example</title>
+		<script src="js/jquery-min.js"></script>
+	</head>
+	<body>
+		<p>We may have more complicated data structures, such as arrays in arrays, objects in objects, arrays in objects, or objects in arrays. Let’s see how jQuery.each() can help us in such scenarios:</p>
+		<script>
+			const colors = [
+				{'red':'#f00'},
+				{'green':'#0f0'},
+				{'blue':'#00f'}
+			];
+			$.each(colors, function(){
+				$.each(this, function(name,value){
+					console.log(`${name} = ${value}`)
+				});
+			});
+		
+		</script>
+	</body>
+</html>

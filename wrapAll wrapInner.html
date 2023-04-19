@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- <script src="https://code.jquery.com/jquery-3.6.4.js" > </script> -->
+		<title>jquery wrapAll wrapInner Method</title>
+		<script src="js/jquery-min.js"></script>
+		<style>
+			#body{
+				font-family:arial
+			}
+			#box{
+				
+				padding:10px;
+				border:1px solid #000;
+				background:pink;
+			} 
+			#test{
+				background:green;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<h1>wrapAll wrapInner method</h1>
+		<br>
+		
+			<h2>Test box</h2>
+			<p>dsf ffregf wegfrfref erfrefre ergrt ergerfgefg </p>
+		
+		<button id="wrapAllbtn">wrapAll</button>
+		<button id="wrapInnerbtn">wrapInner</button>
+		<script>
+			$(document).ready(function(){
+				$("#wrapAllbtn").click(function(){
+					$("p,h2").wrapAll("<div id='box'> </div>"); 
+			});
+			
+			$("#wrapInnerbtn").click(function(){
+					$("h1").wrapInner("<sapn id='test'> </span>"); 
+			});
+		});
+		
+		</script>
+	</body>
+</html>

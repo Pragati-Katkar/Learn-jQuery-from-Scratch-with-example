@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- <script src="https://code.jquery.com/jquery-3.6.4.js" > </script> -->
+		<title>jquery append prepend Method</title>
+		<script src="js/jquery-min.js"></script>
+		<style>
+			#body{
+				font-family:arial
+			}
+			#box{
+				
+				padding:10px;
+				border:1px solid #000;
+				background:pink;
+			} 
+		</style>
+		
+	</head>
+	<body>
+		<h1>Append Prepend method</h1>
+		<div id="box" class="test">
+			<h2>Test box</h2>
+			<p>dsf ffregf wegfrfref erfrefre ergrt ergerfgefg </p>
+		</div>
+		<br>
+		<hr>
+		<ol>
+			<li>list item1</li>
+			<li>list item2</li>
+			<li>list item3</li>
+		</ol>
+		
+		<button id="appendbtn">Append</button>
+		<button id="prependbtn">Prepend</button>
+		
+		<script>
+			$(document).ready(function(){
+				$("#appendbtn").click(function(){
+					$("#box").append("<h2>Pragati</h2>");
+				}); 
+				
+				$("#prependbtn").click(function(){
+					$("#box").prepend("<h2>Gayatri</h2>");
+				});
+				
+				$("#appendbtn").click(function(){
+					$("ol").append("<li>Pragati</li>");
+				}); 
+				
+				$("#prependbtn").click(function(){
+					$("ol").prepend("<li>Gayatri</li>");
+				});
+			
+			});
+		</script>
+	</body>
+</html>

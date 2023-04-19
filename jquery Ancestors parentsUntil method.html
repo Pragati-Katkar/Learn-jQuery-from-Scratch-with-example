@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- <script src="https://code.jquery.com/jquery-3.6.4.js" > </script> -->
+		<title>jquery Ancestors parentsUntil method</title>
+		<script src="js/jquery-min.js"></script>
+		<style>
+			.ancestors * { 
+			  display: block;
+			  border: 2px solid lightgrey;
+			  color: lightgrey;
+			  padding: 5px;
+			  margin: 15px;
+			}
+			</style>
+					
+	</head>
+	<body>
+		<h1> jquery Ancestors method </h1>
+		<h2>parentsUntil() </h2>
+		<br>
+		<div class="ancestors">
+			<div style="width:500px;">div (great-grandparent)
+				<ul>ul (grandparent)  
+				  <li>li (direct parent)
+					<span>span</span>
+				  </li>
+				</ul>   
+			  </div>
+
+			  <div style="width:500px;">div (grandparent)   
+				<p>p (direct parent)
+				  <span>span</span>
+				</p> 
+			</div>
+		</div>
+		<script>
+			$(document).ready(function(){
+			  $("span").parentsUntil("div").css({"color": "red", "border": "2px solid red"});
+			});
+		</script>
+	</body>
+</html>
+		

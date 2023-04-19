@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>jQuery pageX pageY Property</title>
+		<script src="js/jquery-min.js"></script>
+		<style>
+			#result{
+				width:50%;
+				height:200px;
+				background-color:pink;
+				border:2px solid gray;
+			}
+			#box{
+				width:20%;
+				height:70px;
+				background-color:green;
+				border:red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="result"> </div>
+		<div id="box">animate</div>
+		<script>
+			$(document).ready(function(){
+					$(document).mousemove(function(event){
+						$('#result').text("x:" + event.pageX + "  y:" + event.pageY)
+						
+						var x = event.pageX;
+						var y = event.pageY;
+						$("#box").offset({top:y, left:x});
+					});
+			});
+		</script>
+	</body>
+</html>

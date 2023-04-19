@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- <script src="https://code.jquery.com/jquery-3.6.4.js" > </script> -->
+		<title>jquery fadein fadeout fadetoggle method</title>
+		<script src="js/jquery-min.js"></script>
+		<style>
+			#body{
+				font-family:arial
+			}
+			#box{
+				
+				padding:10px;
+				border:1px solid #000;
+				background:pink;
+			} 
+			.box1{
+				
+				padding:10px;
+				border:1px solid #000;
+				background:green;
+			} 
+		</style>
+		
+	</head>
+	<body>
+		<h1>fadein fadeout fadetoggle method</h1>
+		<br>
+		<div id="box" class="test">
+			<h2>Test box</h2>
+			<p>dsf ffregf wegfrfref erfrefre ergrt ergerfgefg </p>
+			
+		</div>
+		<br>
+		<button id="fadeInbtn">fadeIn</button>
+		<button id="fadeOutbtn">fadeOut</button>
+		<button id="fadeTogglebtn">fadeToggle</button>
+		<script>
+			$(document).ready(function(){
+				$("#fadeInbtn").click(function(){
+					$("#box").fadeIn(2000);
+						
+					
+				});
+				$("#fadeOutbtn").click(function(){
+					$("#box").fadeOut(2000,function(){
+						
+					});
+				});
+					
+				$("#fadeTogglebtn").click(function(){
+					$("#box").fadeToggle(2000 , function(){
+						$('#box').append("<span>fdvfd fdgfg fgf fff</span>");
+					});
+					
+				});
+			});
+		
+		</script>
+	</body>
+</html>

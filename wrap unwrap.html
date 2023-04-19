@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- <script src="https://code.jquery.com/jquery-3.6.4.js" > </script> -->
+		<title>jquery after before Method</title>
+		<script src="js/jquery-min.js"></script>
+		<style>
+			#body{
+				font-family:arial
+			}
+			#box{
+				
+				padding:10px;
+				border:1px solid #000;
+				background:pink;
+			} 
+			#test{
+				background:green;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<h1>after before method</h1>
+		<br>
+		<div id="box" class="test">
+			<h2>Test box</h2>
+			<p>dsf ffregf wegfrfref erfrefre ergrt ergerfgefg </p>
+		</div>
+		<button id="wrapbtn">wrap</button>
+		<button id="unwrapbtn">unwrap</button>
+		<script>
+			$(document).ready(function(){
+				$("#wrapbtn").click(function(){
+					$("#box p").wrap("<div id='test'>Pragati</div>");
+				});
+				
+				$("#unwrapbtn").click(function(){
+					$("#box p").unwrap();
+				});
+			});
+		
+		</script>
+	</body>
+</html>

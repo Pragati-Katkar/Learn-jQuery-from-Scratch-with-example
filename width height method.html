@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- <script src="https://code.jquery.com/jquery-3.6.4.js" > </script> -->
+		<title>jquery wrapAll wrapInner Method</title>
+		<script src="js/jquery-min.js"></script>
+		<style>
+			#body{
+				font-family:arial
+			}
+			#box{
+				
+				padding:10px;
+				border:4px solid #000;
+				background:pink;
+				margin:2px;
+			} 
+			#test{
+				background:green;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div id="box">
+			<h1>width height method</h1>
+			<br>
+			
+				<h2>Test box</h2>
+				<p>dsf ffregf wegfrfref erfrefre ergrt ergerfgefg </p>
+		</div>
+		<button id="widthbtn">width</button>
+		<button id="heightbtn">height</button>
+		<script>
+			$(document).ready(function(){
+				$("#widthbtn").click(function(){
+					$("#box").width("200px");
+					$("#box").height("400px");
+					var a =	$("#box").width();
+					console.clear(); 
+					alert('width:'+" "+ a);
+					console.log('Innerwidth:' +" "+ $("#box").innerWidth());
+					console.log('OuterWidth():' +" "+ $("#box").outerWidth());
+					console.log('OuterWidth(true):' +" "+ $("#box").outerWidth(true));
+				
+				});
+				
+				$("#heightbtn").click(function(){
+					var a =	$("#box").height();
+					alert('height:'+" "+ a);
+					console.log('Innerheight:' +" "+ $("#box").innerHeight());
+					console.log('Outerheight():' +" "+ $("#box").outerHeight());
+					console.log('Outerheight(true):' +" "+ $("#box").outerHeight(true));
+				
+				});
+		});
+		
+		</script>
+	</body>
+</html>

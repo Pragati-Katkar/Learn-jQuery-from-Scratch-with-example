@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- <script src="https://code.jquery.com/jquery-3.6.4.js" > </script> -->
+		<title>jquery replacewith replaceall Method</title>
+		<script src="js/jquery-min.js"></script>
+		<style>
+			#body{
+				font-family:arial
+			}
+			#box{
+				
+				padding:10px;
+				border:1px solid #000;
+				background:pink;
+			} 
+		</style>
+		
+	</head>
+	<body>
+		<h1> replacewith replaceall Method</h1>
+		<br>
+		<div id="box" class="test">
+			<h2>Test box</h2>
+			<p>dsf ffregf wegfrfref erfrefre ergrt ergerfgefg sf ffregf wegfrfref erfrefre ergrt ergerfgefgsf ffregf wegfrfref erfrefre ergrt ergerfgefgsf ffregf wegfrfref erfrefre ergrt ergerfgefgsf ffregf wegfrfref erfrefre ergrt ergerfgefgv </p> 
+			<br>
+			<p>sf ffregf wegfrfref erfrefre ergrt ergerfgefg</p>
+			<br>
+			<p>sf ffregf wegfrfref erfrefre ergrt ergerfgefgsf ffregf wegfrfref erfrefre ergrt ergerfgefgsf ffregf wegfrfref erfrefre ergrt ergerfgefgsf ffregf wegfrfref erfrefre ergrt ergerfgefg</p>
+		</div>
+		<button id="replacebtn">Replace</button>
+		
+		<script>
+			$(document).ready(function(){
+				$("#replacebtn").click(function(){
+				
+					$("#box p").replaceWith("<h5>Pragati</h5>");
+				});
+			});
+		</script>
+	</body>
+</html>

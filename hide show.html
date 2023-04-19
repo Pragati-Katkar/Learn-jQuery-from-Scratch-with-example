@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- <script src="https://code.jquery.com/jquery-3.6.4.js" > </script> -->
+		<title>jquery Hide Show Method</title>
+		<script src="js/jquery-min.js"></script>
+		<style>
+			#body{
+				font-family:arial
+			}
+			#box{
+				
+				padding:10px;
+				border:1px solid #000;
+				background:pink;
+			} 
+		</style>
+		
+	</head>
+	<body>
+		<h1>Hide Show method</h1>
+		<br>
+		<div id="box" class="test">
+			<h2>Test box</h2>
+			<p>dsf ffregf wegfrfref erfrefre ergrt ergerfgefg </p>
+			
+		</div>
+		<br>
+		<button id="hidebtn">Hide</button>
+		<button id="showbtn">show</button>
+		<script>
+			$(document).ready(function(){
+				$("#hidebtn").click(function(){
+					$("#box h2").hide(3000 , function(){
+						$('#box').prepend("<span>PRAGATI</span>");
+					});
+				});
+				$("#showbtn").click(function(){
+					$("#box").show(3000 , function(){
+						$('#box').append("<span>fdvfd fdgfg fgf fff</span>")
+					});
+					
+					/*$('<p>Pragati Bhargavi Anil</p>').prependTo('#box');
+					
+					$("#box").prepend("<h2>Gayatri</h2>");
+					
+					$("#box").append("<h2>Anil</h2>"); */
+				});
+			});
+		
+		</script>
+	</body>
+</html>

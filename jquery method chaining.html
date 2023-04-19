@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- <script src="https://code.jquery.com/jquery-3.6.4.js" > </script> -->
+		<title>jquery method chaining</title>
+		<script src="js/jquery-min.js"></script>
+		<style>
+			#body{
+				font-family:arial
+			}
+			#box{
+				
+				padding:10px;
+				border:1px solid #000;
+				background:pink;
+				width:50%;
+				display:grid;
+			} 
+			.box span{
+				
+				padding:10px;
+				color:yellow;
+			} 
+		</style>
+		
+	</head>
+	<body>
+		<h1> method chaining</h1>
+		<br>
+		<div id="box" class="test">
+			<span>Pragati</span>
+			<p>sdsfdsfdsf fedfdefcdf ef</p>
+			<b>dssfdsfdsf</b>
+		</div>
+		<br>
+		<button id="animate">slideUp</button>
+		
+		
+		
+		<script>
+			$(document).ready(function(){
+				$("#animate").click(function(){
+					 $("#box").css('background','green').slideUp(2000).slideDown(2000);
+				})
+			});
+		</script>
+	</body>
+</html>

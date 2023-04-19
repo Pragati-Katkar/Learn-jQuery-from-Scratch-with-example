@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- <script src="https://code.jquery.com/jquery-3.6.4.js" > </script> -->
+		<title>jquery appendTo prependTo Method Method</title>
+		<script src="js/jquery-min.js"></script>
+		<style>
+			#body{
+				font-family:arial
+			}
+			#box{
+				
+				padding:10px;
+				border:1px solid #000;
+				background:pink;
+			} 
+		</style>
+		
+	</head>
+	<body>
+		<h1> appendTo prependTo Method</h1>
+		<br>
+		<div id="box" class="test">
+			<h2>Test box</h2>
+			<p>dsf ffregf wegfrfref erfrefre ergrt ergerfgefg </p>
+		</div>
+		<button id="appendbtn">AppendTo</button>
+		<button id="prependbtn">PrependTo</button>
+		<script>
+			$(document).ready(function(){
+				$("#appendbtn").click(function(){
+					$('<p>Pragati Bhargavi Anil</p>').appendTo('#box');
+				});
+				
+				$("#prependbtn").click(function(){
+					$('<p>Pragati Bhargavi Anil</p>').prependTo('#box');
+				});
+			});
+		</script>
+	</body>
+</html>

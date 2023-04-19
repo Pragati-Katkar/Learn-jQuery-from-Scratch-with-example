@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>jQuery Siblings nextUntil()</title>
+		<script src="js/jquery-min.js"></script>
+		<style>
+		.descendants * { 
+		  display: block;
+		  border: 2px solid lightgrey;
+		  color: lightgrey;
+		  padding: 5px;
+		  margin: 15px;
+		}
+		</style>
+		<script src="js/jquery-min.js"></script>
+		$(document).ready(function(){
+		  $("h2").nextUntil().css({"color": "red", "border": "2px solid red"});
+		});
+		</script>
+	</head>
+	<body class="siblings">
+
+		<div>div (parent)
+		  <p>p</p>
+		  <span>span</span>
+		  <h2>h2</h2>
+		  <h3>h3</h3>
+		  <p>p</p>
+		  <h5>h5</h5>
+		  <h6>h6</h6>
+		</div>
+		<p>The prev(), prevAll() and prevUntil() methods work just like the methods above but with reverse functionality: they return previous sibling elements (traverse backwards along sibling elements in the DOM tree, instead of forward).
+		</p>
+
+	</body>
+	</html>

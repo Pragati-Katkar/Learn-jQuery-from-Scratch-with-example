@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- <script src="https://code.jquery.com/jquery-3.6.4.js" > </script> -->
+		<title>jquery addclass and removeclass Method</title>
+		<script src="js/jquery-min.js"></script>
+		<style>
+			#body{
+				font-family:arial
+			}
+			#box{
+				
+				padding:10px;
+				border:1px solid #000;
+			}
+			.first{
+				background-color:tan;
+				font-weight:bold;
+			}
+			.secound{
+				background-color:pink;
+				border-radius:10px;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		<h1>jquery class</h1>
+		<div id="box" class="test">
+			<h2>Test box</h2>
+			<p>dsf ffregf wegfrfref erfrefre ergrt ergerfgefg </p>
+		</div>
+		<br>
+		<button id="addbutton">Add class</button>
+		<button id="removebutton">remove class</button>
+		<button id="togglebutton">toggle class</button>
+		<script>
+			$(document).ready(function(){
+				$("#addbutton").click(function(){
+					$("#box").addClass("secound");
+					$("h1").addClass("first");
+				});
+				
+				$("#removebutton").click(function(){
+					$("h1").removeClass("first");
+				});
+				
+				$("#togglebutton").click(function(){
+					
+					$("h1").toggleClass("first");
+				});
+			});
+		</script>
+	</body>
+</html>
